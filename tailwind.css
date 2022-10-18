@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+
+    @font-face {
+        font-family: 'bebas_new';
+        src: local('Bebas Neue'), url("../font/bebas_neue/BebasNeue-Regular.ttf");
+        font-weight: bold;
+        font-display: swap;
+
+    }
+
+    @font-face {
+        font-family: 'catamaran';
+        src: local('Catamaran'), url("../font/catamaran/Catamaran-Light.ttf");
+        font-weight: 300;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'catamaran';
+        src: local('Catamaran'), url("../font/catamaran/Catamaran-Regular.ttf");
+        font-weight: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'catamaran';
+        src: local('Catamaran'), url("../font/catamaran/Catamaran-Bold.ttf");
+        font-weight: bold;
+        font-display: swap;
+    }
+
+}
+
+
+@layer components {
+
+
+    .theme-display
+    {
+        @apply
+        font-bebas_new font-bold
+        text-[28px] leading-[30px]
+        sm:text-[30px] sm:leading-[32px]
+        md:text-[40px] md:leading-[42px]
+        lg:text-[50px] lg:leading-[52px]
+        xl:text-[68px] xl:leading-[70px]
+    }
+
+    .theme-h1
+    {
+        @apply
+        font-bebas_new font-bold
+        text-[30px] leading-[32px]
+        sm:text-[30px] sm:leading-[32px]
+        md:text-[35px] md:leading-[37px]
+        lg:text-[38px] lg:leading-[40px]
+        xl:text-[48px] xl:leading-[50px]
+    }
+
+    .theme-h2
+    {
+        @apply
+        font-bebas_new font-bold
+        text-[26px] leading-[28px]
+        sm:text-[28px] sm:leading-[30px]
+        md:text-[30px] md:leading-[32px]
+        lg:text-[32px] lg:leading-[34px]
+        xl:text-[36px] xl:leading-[38px]
+    }
+
+    .theme-h3
+    {
+        @apply
+        font-bebas_new font-bold
+        text-[18px] leading-[20px]
+        sm:text-[21px] sm:leading-[23px]
+        md:text-[20px] md:leading-[22px]
+        lg:text-[22px] lg:leading-[24px]
+        xl:text-[26px] xl:leading-[28px]
+    }
+
+    .theme-h4
+    {
+        @apply
+        font-bebas_new font-bold
+        text-[18px] leading-[20px]
+        sm:text-[16px] sm:leading-[18px]
+        md:text-[17px] md:leading-[19px]
+        lg:text-[18px] lg:leading-[20px]
+        xl:text-[20px] xl:leading-[22px]
+    }
+
+    .theme-subtitle
+    {
+        @apply
+        font-catamaran font-normal
+        text-[16px] leading-[16px]
+        md:text-[20px] md:leading-[20px]
+        lg:text-[30px] lg:leading-[30px]
+    }
+
+    .theme-gap-p
+    {
+        @apply relative flex flex-col gap-4
+    }
+
+    .theme-gap-m
+    {
+        @apply relative flex flex-col gap-6
+    }
+
+    .theme-gap-g
+    {
+        @apply relative flex flex-col gap-10
+    }
+
+    .theme-text-light
+    {
+        @apply
+        font-catamaran font-light
+        text-[16px] leading-[26px]
+        md:text-[17px] md:leading-[27px]
+        lg:text-[18px] lg:leading-[30px]
+    }
+
+    .theme-text-normal
+    {
+        @apply
+        font-catamaran font-normal
+        text-[16px] leading-[24px]
+        md:text-[17px] md:leading-[27px]
+        lg:text-[18px] lg:leading-[30px]
+    }
+
+    .theme-text-strong
+    {
+        @apply
+        font-catamaran font-bold
+        text-[16px] leading-[26px]
+        md:text-[17px] md:leading-[27px]
+        lg:text-[18px] lg:leading-[30px]
+    }
+
+    .theme-description
+    {
+        @apply
+        font-catamaran font-light
+        text-[15px] leading-[22px]
+        md:text-[16px] md:leading-[24px]
+        lg:text-[16px] lg:leading-[24px]
+    }
+
+    .theme-section-p
+    {
+        @apply relative w-full
+        py-[15px] px-[15px]
+        md:p-[20px]
+        xl:py-[30px] xl:px-0
+
+    }
+
+    .theme-section-m
+    {
+        @apply relative w-full
+        py-[20px] px-[20px]
+        md:p-[30px]
+        xl:py-[40px] xl:px-0
+
+    }
+
+    .theme-section-g
+    {
+        @apply relative w-full
+        py-[25px] px-[25px]
+        md:p-[40px]
+        xl:py-[60px] xl:px-0
+
+    }
+
+    .theme-container-p
+    {
+        @apply
+        relative w-full max-w-[800px]
+        mx-auto
+    }
+
+    .theme-container-m
+    {
+        @apply
+        relative w-full max-w-[900px]
+        mx-auto
+    }
+
+    .theme-container-g
+    {
+        @apply
+        relative w-full max-w-[1140px]
+        mx-auto
+    }
+
+    .theme-btn-01
+    {
+
+        @apply
+        relative flex flex-row justify-center items-center w-fit h-[60px]
+        bg-color01
+        text-color04
+        font-normal
+        box-border py-2 px-6
+        rounded
+        text-[18px]
+        uppercase
+        md:max-w-fit
+    }
+
+    .theme-btn-01-full
+    {
+
+        @apply
+        relative flex flex-row justify-center items-center w-[100%] min-w-[300px] h-[70px]
+        bg-color01
+        text-color04
+        font-normal
+        box-border py-2 px-6
+        rounded
+        text-[18px]
+        uppercase
+        md:max-w-fit
+
+    }
+
+    .theme-btn-02
+    {
+
+        @apply
+        relative flex flex-row justify-center items-center w-fit h-[60px]
+        border-color01
+        text-color01
+        font-normal
+        box-border py-2 px-6
+        border-2
+        rounded
+        text-[18px]
+        uppercase
+        md:max-w-fit
+
+    }
+
+    .theme-btn-02-full
+    {
+
+        @apply
+        relative flex flex-row justify-center items-center w-[100%] min-w-[300px] h-[70px]
+        border-color01
+        text-color01
+        font-normal
+        box-border py-2 px-6
+        border-2
+        rounded
+        text-[18px]
+        uppercase
+        md:max-w-fit
+
+    }
+
+
+}
